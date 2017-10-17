@@ -17,14 +17,16 @@ puts driver.find_element(:id, "LoadTime").text
 puts ' '
 puts driver.find_element(:id, "TTFB").text
 
-loadtime = "driver.find_element(:id, LoadTime).text"
-ttfb = "driver.find_element(:id, TTFB).text"
+load_time = driver.find_element(:id, "LoadTime").text
+time_to_first_byte = driver.find_element(:id, "TTFB").text
 
 gmail = Gmail.connect('username', 'password')
 email = gmail.compose do
-  to "chasemorgan15@yahoo.com"
+  to "email@gmail.com"
   subject "First Testing Script"
-  body "#{loadtime} is the load time and #{ttfb} is the time to first byte"
+  body "Values are #{time_to_first_byte}(TTFB) and #{load_time}(LoadTime)
+  from the url https://www.ebay.com"
 end
 email.deliver!
 sleep 50
+
