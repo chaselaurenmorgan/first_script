@@ -20,7 +20,7 @@ puts driver.find_element(:id, "TTFB").text
 loadtime = "driver.find_element(:id, LoadTime).text"
 ttfb = "driver.find_element(:id, TTFB).text"
 
-gmail = Gmail.connect('chasemorgan15', 'Averdell34')
+gmail = Gmail.connect('username', 'password')
 email = gmail.compose do
   to "chasemorgan15@yahoo.com"
   subject "First Testing Script"
