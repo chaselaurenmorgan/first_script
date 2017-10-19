@@ -26,7 +26,7 @@ end
   time_to_first_byte = driver.find_element(:id, "TTFB").text
 
 
-  gmail = Gmail.connect('chasemorgan15', 'Chasem34')
+  gmail = Gmail.connect('un', 'pw')
   email = gmail.compose do
     to "chasemorgan15@yahoo.com"
     subject "First Testing Script"
